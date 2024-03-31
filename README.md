@@ -1,7 +1,8 @@
+# FORMACIÓN PROFESIONAL 2
 
-FORMACIÓN PROFESIONAL 2
+## Integrantes
 
-Integrantes
 - Ignacio San Francisco
 - Felipe Chepilla
 - Valeria Castro Ubal
+- Jonatan Fredes Gomez
