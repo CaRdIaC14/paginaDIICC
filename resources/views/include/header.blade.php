@@ -27,7 +27,7 @@
                 <div class="col-md-4 col-sm-4 col-xs-16">
                     <div class="logo">
                         <a href="https://uda.cl/" target="_blank">
-                            <img id="imglogo" src="img/logo/logodep.png")/>
+                            <img id="imglogo" src="{{asset('img/logo/logodep.png')}}"/>
                         </a>
                     </div>
                 </div>

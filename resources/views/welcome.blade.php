@@ -9,7 +9,7 @@
     ?>
     
     @include("config.config")
-    
+    @include("include.functions")
     @include("include.head")
  <meta charset="UTF-8">
 <body>
@@ -260,7 +260,7 @@
                                 <div class="head">
                                     <div class="circle"></div>
                                         <div class="img">
-                                            <img src="img/areas/SoftwareEngineering/img1.jpg" alt="course">
+                                            <img src="{{asset('img/areas/SoftwareEngineering/img1.jpg')}}" alt="course">
                                         </div>
                                         <div style="padding-top: 280px; font-weight: bold;">
                                             <h3 style = "font-weight: bold; color: black; ">Inteligencia de Máquinas</h3>
@@ -282,7 +282,7 @@
                                 <div class="head">
                                     <div class="circle"></div>
                                         <div class="img">
-                                            <img src="img/areas/ArtificialIntelligent/img1.jpg" alt="course">
+                                            <img src="{{asset('img/areas/ArtificialIntelligent/img1.jpg')}}" alt="course">
                                         </div>
                                         <div style="padding-top: 280px; font-weight: bold;">
                                             <h3 style = "font-weight: bold; color: black; ">Ingeniería de Software</h3>
@@ -304,7 +304,7 @@
                                 <div class="head">
                                     <div class="circle"></div>
                                         <div class="img">
-                                            <img src="img/areas/GestionTI/img1.jpg" alt="course">
+                                            <img src="{{asset('img/areas/GestionTI/img1.jpg')}}" alt="course">
                                         </div>
                                         <div style="padding-top: 280px; font-weight: bold;">
                                             <h3 style = "font-weight: bold; color: black; ">Gestión TI</h3>
@@ -335,7 +335,7 @@
                                 <div class="single-testimonial col-md-6"><!--cambios-->
                                     <div class="testimonial-info">
                                         <div class="testimonial-img">
-                                            <img src="img/academicos/robots.jpg" alt="academicos">
+                                            <img src="{{asset('img/academicos/robots.jpg')}}" alt="academicos">
                                         </div>
                                         <div class="testimonial-content">
                                             <h4>ROBÓTICA EDUCATIVA</h4>
@@ -353,7 +353,7 @@
                                 <div class="single-testimonial col-md-6"><!--cambios-->
                                     <div class="testimonial-info">
                                         <div class="testimonial-img">
-                                            <img src="img/academicos/code.jpg" alt="academicos">
+                                            <img src="{{asset('img/academicos/code.jpg')}}" alt="academicos">
                                         </div>
                                         <div class="testimonial-content">
                                             <h4>Code Club UDA</h4>
