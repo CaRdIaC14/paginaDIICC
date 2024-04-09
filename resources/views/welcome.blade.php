@@ -6,16 +6,17 @@
     $_SESSION['root'] = dirname(__FILE__);
     $file = __FILE__;
     $pagetitle = "UDA - Departamento de Ingeniería Informática y Ciencias de la Computación";
-    include_once "config/config.php";
-    include_once "include/functions.php";
-    include_once "include/head.php";
-?>
+    ?>
+    
+    @include("config.config")
+    
+    @include("include.head")
  <meta charset="UTF-8">
 <body>
 
     <body>
         <!-- Header -->
-        <?php include_once "include/header.php"; ?>
+        @include("include/header")
         <!-- Header Area End -->
         <!-- Background Area Start -->
         <section id="slider-container" class="slider-area">
@@ -198,69 +199,14 @@
                         <div class="item active" >
                             <div class="notice-left">
                         
-                                <?php
-                                    $sql = "SELECT titulo,descripcion,img_path FROM noticias ORDER BY id DESC LIMIT 1 "; //ultima se muestra primera
-                                    $resultado = mysqli_query($conexion, $sql);
-                                               
-                                    while ($mostrar = mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
-
-                                        if (strlen($mostrar['descripcion']) > 250 ){
-                                            $mostrar['descripcion'] = substr($mostrar['descripcion'],0, 250)."...";
-                                        }
-                                    ?>
-                                    <a class="card mb-3" style="width: 60%; height: 400px;" <?php echo sprintf('href="https://diicc.uda.cl/noticia.php?id=29"', $mostrar['id']);?>>
-                                        <div class="row pt-100 pb-105">
-                                            <div class="col-md-3">                                                                                                                                        
-                                                <img style="width: 200px; height: 200px;" path="*.woff" src=<?php echo fromroot($file, $mostrar["img_path"]); ?>>
-                                            </div>
-                                            <div class="col-md-9">
-                                                <div class="let card-body">
-                                                    <h4 class="card-title"><?php echo utf8_encode($mostrar['titulo']); ?> </h4>
-                                                    <p class="card-text"><?php echo utf8_encode($mostrar['descripcion']); ?></p>
-                                                    <div class="d-flex flex-row justify-content-between">
-                                                        <p class="card-text"><small class="text-muted"><?php echo $mostrar['fecha']; ?></small></p>
-                                                            <!--<p class="card-text"><small class="text-muted"><?php# echo "correo: ",$mostrar['correo']; ?></small></p>-->
-                                                    </div>    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                        <!--<hr class="solid" style="border-top: 3px solid #bbb;">-->
-                                    <?php } ?>
+                               
                             </div>
                         </div>
 
                         <div class="item">
                             <div class="notice-left">
                         
-                                <?php
-                                $sql = "SELECT titulo,descripcion,img_path,correo FROM noticias WHERE id=28 LIMIT 1 "; //actualizar id y url
-                                $resultado = mysqli_query($conexion, $sql);
-                                   
-                                while ($mostrar = mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
-
-                                    if (strlen($mostrar['descripcion']) > 250 ){
-                                        $mostrar['descripcion'] = substr($mostrar['descripcion'],0, 250)."...";
-                                    }
-                                        ?>
-                                    <a class="card mb-3" style="width: 60%; height: 400px;" <?php echo sprintf('href="https://diicc.uda.cl/noticia.php?id=28"', $mostrar['id']);?>>
-                                        <div class="row pt-100 pb-105">
-                                            <div class="col-md-3">                                                                                                                                        
-                                                <img style="width: 200px; height: 200px;" path="*.woff" src=<?php echo fromroot($file, $mostrar["img_path"]); ?>>
-                                            </div>
-                                            <div class="col-md-9">
-                                                <div class="let card-body">
-                                                    <h4 class="card-title"><?php echo utf8_encode($mostrar['titulo']); ?> </h4>
-                                                    <p class="card-text"><?php echo utf8_encode($mostrar['descripcion']); ?></p>
-                                                    <div class="d-flex flex-row justify-content-between">
-                                                        <p class="card-text"><small class="text-muted"><?php echo $mostrar['fecha']; ?></small></p>
-                                                        <!--<p class="card-text"><small class="text-muted"><?php #echo "correo: ",$mostrar['correo']; ?></small></p>-->
-                                                    </div>    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                <?php } ?>
+                               
                             </div>
                                     <!--<hr class="solid" style="border-top: 3px solid #bbb;">-->     
                         </div>
@@ -270,35 +216,7 @@
                         <div class="item">
                             <div class="notice-left">
                         
-                                <?php
-                                $sql = "SELECT titulo,descripcion,img_path,correo FROM noticias WHERE id=27 LIMIT 1 ";  // actualizar id y url
-                                $resultado = mysqli_query($conexion, $sql);
-                   
-                                    while ($mostrar = mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
-
-                                        if (strlen($mostrar['descripcion']) > 250 ){
-                                            $mostrar['descripcion'] = substr($mostrar['descripcion'],0, 250)."...";
-                                        }
-                                            ?>
-                                        <a class="card mb-3" style="width: 60%; height: 400px;" <?php echo sprintf('href="https://diicc.uda.cl/noticia.php?id=27"', $mostrar['id']);?>>
-                                            <div class="row pt-100 pb-105">
-                                                <div class="col-md-3">                                                                                                                                        
-                                                    <img style="width: 200px; height: 200px;" path="*.woff" src=<?php echo fromroot($file, $mostrar["img_path"]); ?>>
-                                                </div>
-                                                <div class="col-md-9">
-                                                    <div class="let card-body">
-                                                        <h4 class="card-title"><?php echo utf8_encode($mostrar['titulo']); ?> </h4>
-                                                        <p class="card-text"><?php echo utf8_encode($mostrar['descripcion']); ?></p>
-                                                        <div class="d-flex flex-row justify-content-between">
-                                                            <p class="card-text"><small class="text-muted"><?php echo $mostrar['fecha']; ?></small></p>
-                                                                <!--<p class="card-text"><small class="text-muted"><?php #echo "correo: ",$mostrar['correo']; ?></small></p>-->
-                                                        </div>    
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <!--<hr class="solid" style="border-top: 3px solid #bbb;">-->
-                                    <?php } ?>
+                                
                             </div>
                     
                         </div>
@@ -505,81 +423,12 @@
             <div class="container">
                
                 <div class="row">
-                    <?php
-                        date_default_timezone_set('UTC');
-                        setlocale(LC_ALL, 'ES');
-                        $sql = "SELECT * FROM eventos WHERE fecha > CURDATE() ORDER BY id ASC LIMIT 6"; // eventos
-                        $resultado = mysqli_query($conexion, $sql);
-                        $i = 0;
-                        $data = array();
-                        while ($mostrar = mysqli_fetch_array($resultado)){
-                           
-                            #$mostrar['fecha'] = new DateTime($mostrar['fecha']);
-                            $mostrar['hora_inicio'] = new DateTime($mostrar['hora_inicio']);
-                            $mostrar['hora_termino'] = new DateTime($mostrar['hora_termino']);
-                            array_push($data, $mostrar);
-                        }
-
-                    ?>
+                   
                     <div class="col-md-6 col-sm-12 col-xs-12">
-                        <?php 
-                        foreach(array_slice($data, 0 ,count($data)/2) as $m){ 
-                            echo sprintf(
-                                '
-                                <div class="single-event mb-35">
-                                    <div class="event-date">
-                                        <h3><a>%s<span>%s</span></a></h3>
-                                    </div>
-                                    <div class="event-content text-left">
-                                        <div class="event-content-left">
-                                            <h4><a href="http://www.diicc.uda.cl/noticias.php">%s</a></h4>
-                                            <ul>
-                                                <li><i class="bi bi-clock-fill"></i>%s - %s</li>
-                                                <li><i class="bi bi-pin-map-fill"></i>%s</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                ',
-                                strftime('%d',strtotime ($m['fecha'])),
-                                strftime('%B',strtotime($m['fecha'])),
-                                utf8_encode($m['nombre']),
-                                $m['hora_inicio']->format('H:i'),
-                                $m['hora_termino']->format('H:i'),
-                                utf8_encode($m['lugar'])
-                            );
-                        }
-                        ?>
+                        
                     </div>
                     <div class="col-md-6 hidden-sm hidden-xs">
-                    <?php 
-                        foreach(array_slice($data,count($data)/2) as $m){
-                            echo sprintf(
-                                '
-                                <div class="single-event mb-35">
-                                    <div class="event-date">
-                                        <h3><a>%s<span>%s</span></a></h3>
-                                    </div>
-                                    <div class="event-content text-left">
-                                        <div class="event-content-left">
-                                            <h4><a href="http://www.diicc.uda.cl/noticias.php">%s</a></h4>
-                                            <ul>
-                                                <li><i class="bi bi-clock-fill"></i>%s - %s</li>
-                                                <li><i class="bi bi-pin-map-fill"></i>%s</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                ',
-                                strftime('%d',strtotime($m['fecha'])),
-                                strftime('%B',strtotime($m['fecha'])),
-                                utf8_encode($m['nombre']),
-                                $m['hora_inicio']->format('H:i'),
-                                $m['hora_termino']->format('H:i'),
-                                utf8_encode($m['lugar'])
-                            );
-                        }
-                        ?>
+                    
                     </div>
                 </div>
             </div>
@@ -596,44 +445,7 @@
             <div class="container">
                 
                 <div class="row">
-                <?php
-                        $sql = "SELECT p.*, f.Nombre AS autor FROM publicaciones AS p INNER JOIN funcionarios AS f ON p.id_academico = f.id ORDER BY fecha DESC LIMIT 3"; // mejorar query falta nombre del que subio la noticia
-                        $resultado = mysqli_query($conexion, $sql);
-                        while ($mostrar = mysqli_fetch_array($resultado)){
-                            echo sprintf(
-                                '
-                                <div class="col-md-4 col-sm-6 col-xs-12" >
-                                    <div class="single-blog" >
-                                        <div class="blog-img" >
-                                            <a href="%s"><img src="%s" alt="blog"></a>
-                                            <div class="blog-hover">
-                                                <a href="%s"><i class="fa fa-link"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="blog-content" ">
-                                            <div class="blog-top">
-                                                <p>Escrito por %s / %s</p>
-                                            </div>
-                                            <div class="blog-bottom">
-                                                <h2><a href="%s">%s</a></h2>
-                                                <a href="%s">Leer más...</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                ',
-                                $mostrar['acceso'],
-                                fromroot($file, $mostrar["img_path"], true),
-                                utf8_encode($mostrar['acceso']),
-                                utf8_encode($mostrar['autor']),
-                                $mostrar['fecha'],
-                                $mostrar['acceso'],
-                                utf8_encode($mostrar['titulo']),
-                                $mostrar['acceso']
-                            );
-                        }
-
-                    ?>
+                
                     
                 </div>
             </div>
@@ -643,7 +455,7 @@
 
 
         <!-- FOOTER -->
-        <?php include_once "include/footer.php"; ?>
+        @include("include.footer")
         <!-- FOOTER -->
 
         

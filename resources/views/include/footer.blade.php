@@ -5,7 +5,7 @@
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="single-widget pr-60">
                         <div class="footer-logo pb-25">
-                            <a href="http://www.uda.cl/"><img src=<?php echo fromroot($file, "img/logo/logouda1.png"); ?> target="_blank"></a>
+                            <a href="http://www.uda.cl/"><img src="img/logo/logouda1.png") target="_blank"></a>
                         </div>
                     </div>
                 </div>
@@ -13,10 +13,10 @@
                     <div class="single-widget">
                         <h3>información</h3>
                         <ul>
-                            <li><a href=<?php echo fromroot($file, "academicos.php"); ?>>Académicos</a></li>
-                            <li><a href=<?php echo fromroot($file, "noticias.php"); ?>>Noticias</a></li>
-                            <li><a href=<?php echo fromroot($file, "index.php#eventos"); ?>>Eventos</a></li>
-                            <li><a href=<?php echo fromroot($file, "publicaciones.php"); ?>>Publicaciones</a></li>
+                            <li><a href="academicos.php")>Académicos</a></li>
+                            <li><a href="noticias.php")>Noticias</a></li>
+                            <li><a href="index.php#eventos")>Eventos</a></li>
+                            <li><a href="publicaciones.php")>Publicaciones</a></li>
                         </ul>
                     </div>
                 </div>
@@ -62,15 +62,15 @@
     </div>
 </footer>
 
-<script src=<?php echo fromroot($file, "js/vendor/jquery-1.12.0.min.js"); ?>></script>
-<script src=<?php echo fromroot($file, "js/bootstrap.min.js"); ?>></script>
-<script src=<?php echo fromroot($file, "js/jquery.meanmenu.js"); ?>></script>
-<script src=<?php echo fromroot($file, "js/jquery.magnific-popup.js"); ?>></script>
-<script src=<?php echo fromroot($file, "js/ajax-mail.js"); ?>></script>
-<script src=<?php echo fromroot($file, "js/owl.carousel.min.js"); ?>></script>
-<script src=<?php echo fromroot($file, "js/jquery.mb.YTPlayer.js"); ?>></script>
-<script src=<?php echo fromroot($file, "js/jquery.nicescroll.min.js"); ?>></script>
-<script src=<?php echo fromroot($file, "js/plugins.js"); ?>></script>
-<script src=<?php echo fromroot($file, "js/main.js"); ?>></script>
-<script src=<?php echo fromroot($file, "js/jqueryjs"); ?>></script>
-<script src=<?php echo fromroot($file, "js/bootstrap.js"); ?>></script>
+<script src="js/vendor/jquery-1.12.0.min.js")></script>
+<script src="js/bootstrap.min.js")></script>
+<script src="js/jquery.meanmenu.js")></script>
+<script src="js/jquery.magnific-popup.js")></script>
+<script src="js/ajax-mail.js")></script>
+<script src="js/owl.carousel.min.js")></script>
+<script src="js/jquery.mb.YTPlayer.js")></script>
+<script src="js/jquery.nicescroll.min.js")></script>
+<script src="js/plugins.js")></script>
+<script src="js/main.js")></script>
+<script src="js/jqueryjs")></script>
+<script src="js/bootstrap.js")></script>

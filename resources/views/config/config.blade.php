@@ -3,8 +3,8 @@
 shell_exec("ssh -f -L 127.0.0.1:3307:127.0.0.1:3306 diicc@10.17.17.35 sleep 60 >> /var/www/carlos/https://diicc.uda.cl/logfile"); 
 $servidor = "127.0.0.1";
 $usuario  = "root";
-$password = "muda485";
-$database = "paginaDIICC";
+$password = "";
+$database = "paginadiicc";
 
 // // Crear conexión
 $conexion = mysqli_connect($servidor, $usuario, $password, $database, 3306);
