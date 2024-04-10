@@ -42,7 +42,7 @@
                                     <li class="hidden-sm"><a href="academicos.php">Equipo</a>
                                         <ul>
                                             <li><a href="academicos.php">Académicos</a></li>
-                                            <li><a href="funcionarios.php">Administrativos</a></li>
+                                            <li><a href="{{ url('/funcionarios') }}">Administrativos</a></li>
                                         </ul>
                                     </li>
                                    
@@ -51,8 +51,7 @@
                                         <ul>
                                             <li><a>Pregrado</a>
                                                 <ul>
-                                                    <!-- <li><a href=<?php /*echo fromroot($file, "pregrado/Ingenieria-Ejecucion.php");*/ ?>>Ingeniería en Ejecución</a> </li> -->
-                                                    <li><a href="pregrado/Ingenieria-Civil.php">Ingeniería civil en Computación e Informática</a> </li>
+                                                    <li><a href="{{ url('/Ingeniera-Civil') }}">Ingeniería civil en Computación e Informática</a></li>
                                                 </ul>
                                             </li>
                                             <li><a>Postítulo</a>

@@ -2,8 +2,6 @@
     session_start();
     $file = __FILE__;
     $pagetitle = "Académicos - DIICC UDA";
-    include_once "config/config.php";
-    include_once "include/functions.php";
 
     $id = $_GET['id'];
     $sql = "select * from noticias where id = {$id}";// mejorar query falta nombre del que subio la noticia
@@ -11,10 +9,13 @@
     $mostrar = mysqli_fetch_array($resultado);
 ?>
 <!doctype html>
+@include("config.config")
+@include("include.functions")
+@include("include.head")
 <html class="no-js" lang="en">
-    <?php include_once "include/head.php"; ?>
+
     <!-- HEADER -->
-    <?php include_once "include/header.php"; ?>
+    @include("include/header")
     <!-- HEADER -->
     <body>
         
@@ -100,7 +101,7 @@
         <!-- Blog End -->
         
         <!-- FOOTER -->
-        <?php include_once "include/footer.php"; ?>
+        @include("include.footer")
         <!-- FOOTER -->
     </body>
 </html>
