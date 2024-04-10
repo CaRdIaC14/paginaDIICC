@@ -38,7 +38,7 @@
                             <nav>
                                 <ul>
                                     <li><a href="index.php")>Inicio</a></li>
-                                    <li><a href="Departamento.php">Departamento</a></li>
+                                    <li><a href="{{ url('/Departamento') }}">Departamento</a></li>
                                     <li class="hidden-sm"><a href="academicos.php">Equipo</a>
                                         <ul>
                                             <li><a href="academicos.php">Académicos</a></li>

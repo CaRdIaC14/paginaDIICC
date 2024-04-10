@@ -1,17 +1,20 @@
 <!doctype html>
 <html class="no-js" lang="es">
+    @include("config.config")
+    @include("include.functions")
+    @include("include.head")
 <?php
     session_start();
     $_SESSION['root'] = dirname(__FILE__);
     $file = __FILE__;
     $pagetitle = "Departamento - DIICC UDA";
-    include_once "config/config.php";
-    include_once "include/functions.php";
-    include_once "include/head.php";
 ?>
+
+    
 <body>
+
     <!-- Header -->
-    <?php include_once "include/header.php";?>
+    @include("include/header")
     <!-- Header Area End -->
 
     <!-- Inicio del Banner -->
@@ -330,7 +333,7 @@
     </div>
 
     <!-- FOOTER -->
-    <?php include_once "include/footer.php";?>
+    @include("include.footer")
     <!-- FOOTER -->
 
 
