@@ -1,13 +1,15 @@
 <!doctype html>
 <html class="no-js" lang="span">
 
+    @include("config.config")
+    @include("include.functions")
+    @include("include.head")
+
 <?php
     session_start();
     $file = __FILE__;
     $pagetitle = "Publicaciones - DIICC UDA";
-    include_once "config/config.php";
-    include_once "include/functions.php";
-    include_once "include/head.php";
+
     if (!isset($_GET['page'])){
         $page = 0;
     }
@@ -19,7 +21,7 @@
 <body>
 
     <!-- Header -->
-    <?php include_once "include/header.php"; ?>
+    @include("include/header")
     <!-- Header Area End -->
     <!-- Banner Area Start -->
     <div class="banner-area-wrapper">
@@ -105,7 +107,7 @@
     </div>
     <!-- Blog End -->
     <!-- FOOTER -->
-    <?php include_once "include/footer.php"; ?>
+    @include("include.footer")
     <!-- FOOTER -->
     <script src="js/vendor/jquery-1.12.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

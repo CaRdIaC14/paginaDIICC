@@ -1,21 +1,22 @@
 <!doctype html>
 <html class="no-js" lang="es">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    @include("config.config")
+    @include("include.functions")
+    @include("include.head")
 <?php
     session_start();
     $_SESSION['root'] = dirname(__FILE__);
     $file = __FILE__;
     $pagetitle = "UDA - Departamento de Ingeniería Informática y Comunicación";
-    include_once "config/config.php";
-    include_once "include/functions.php";
-    include_once "include/head.php";
+
 ?>
 <meta charset="UTF-8">
 <body>
 
     <body>
         <!-- Header -->
-        <?php include_once "include/header.php"; ?>
+        @include("include/header")
         <!-- Header Area End -->
         <!-- Background Area Start -->
         <section id="slider-container" class="slider-area">
@@ -123,7 +124,7 @@
         <!-- Background Area End -->
 
         <!-- FOOTER -->
-        <?php include_once "include/footer.php"; ?>
+        @include("include.footer")
         <!-- FOOTER -->
 
         

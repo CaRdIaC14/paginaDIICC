@@ -1,17 +1,18 @@
 <!doctype html>
 <html class="no-js" lang="en">
+    @include("config.config")
+    @include("include.functions")
+    @include("include.head")
 <?php
     session_start();
     $file = __FILE__;
     $pagetitle = "MAGISTER EN TECNOLOGÍAS DE LA INFORMACIÓN E INNOVACIÓN - DIICC UDA";
-    include_once "../include/functions.php";
-    include_once "../config/config.php";
-    include_once "../include/head.php";
+
 ?>
 
 <body>
     <!-- HEADER -->
-    <?php include_once "../include/header.php";?>
+    @include("include/header")
     <!-- HEADER -->
 
     <!-- Blog Start -->
@@ -206,7 +207,7 @@
     <!-- Blog End -->
 
         <!-- FOOTER -->
-        <?php include_once "../include/footer.php";?>
+        @include("include.footer")
         <!-- FOOTER -->
 </body>
 

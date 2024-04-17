@@ -1,12 +1,15 @@
 <!doctype html>
 <html class="no-js" lang="en">
+
+    @include("config.config")   
+    @include("include.functions")
+    @include("include.head")
+
 <?php
     session_start();
     $file = __FILE__;
     $pagetitle = "Nombre Trabajo - DIICC UDA";
-    include_once "config/config.php";
-    include_once "include/functions.php";
-    include_once "include/head.php";
+
 
     if (!isset($_GET['id'])) {
         header(sprintf('Location:%s', fromroot($file, "postular-trabajo.php", True)));
@@ -19,7 +22,7 @@ $result = $result->fetch_assoc();
 
 <body>
     <!-- Header -->
-    <?php include_once "include/header.php"; ?>
+    @include("include/header")
     <!-- Header Area End -->
     <!-- Banner Area Start -->
     <div class="banner-area-wrapper">
@@ -123,7 +126,7 @@ $result = $result->fetch_assoc();
     </div>
     <!-- Blog End -->
     <!-- FOOTER -->
-    <?php include_once "include/footer.php"; ?>
+    @include("include.footer")
     <!-- FOOTER -->
 </body>
 

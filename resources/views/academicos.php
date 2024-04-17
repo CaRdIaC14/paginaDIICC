@@ -1,18 +1,21 @@
 <!doctype html>
 <html class="no-js" lang="en">
+    @include("config.config")
+    @include("include.functions")
+    @include("include.head")
 <?php
     session_start();
+    $_SESSION['root'] = dirname(__FILE__);
     $file = __FILE__;
     $pagetitle = "Académicos - DIICC UDA";
-    include_once "config/config.php";
-    include_once "include/functions.php";
-    include_once "include/head.php";
+
 ?>
 
     <body id="body_academicos">
         <!-- Header -->
-        <?php include_once "include/header.php"; ?>
+        @include("include/header")
         <!-- Header Area End -->
+
         <!-- Banner Area Start -->
         <div class="banner-area-wrapper">
             <div class="banner-area text-center">
@@ -34,12 +37,6 @@
         <div id= "espacio"></div>
             <section class="container">
                 <div class="row active-with-click">
-                    <?php
-                        $sql = "select * from funcionarios WHERE es_academico = 1 ORDER BY jerarquia DESC";
-                        $resultado = mysqli_query($conexion, $sql);
-                        $consecutivo = 1;
-                        while ($mostrar = mysqli_fetch_array($resultado)) {
-                    ?>
                    <div class="col-md-4 col-sm-6 col-xs-12">
                         <article class="material-card Teal">
                             <h3>
@@ -70,12 +67,12 @@
                     <?php 
                     $consecutivo++;
             
-                    } 
+
                     ?>
                 </div>
             </section>
         <!-- FOOTER -->
-        <?php include_once "include/footer.php"; ?>
+        @include("include.footer")
         <!-- FOOTER -->
     </body>
 

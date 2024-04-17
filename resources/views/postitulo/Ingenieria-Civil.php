@@ -1,18 +1,19 @@
 <!doctype html>
 <html class="no-js" lang="en">
+    @include("config.config")
+    @include("include.functions")
+    @include("include.head")
 <?php
 session_start();
 $file = __FILE__;
 $pagetitle = "Ingeniería Civil en Computación e Informática - DIICC UDA";
-include_once "../include/functions.php";
-include_once "../config/config.php";
-include_once "../include/head.php";
+
 echo '<script src="../js/malla.js"></script>';
 ?>
 
 <body>
     <!-- HEADER -->
-    <?php include_once "../include/header.php"; ?>
+    @include("include/header")
     <!-- HEADER -->
     <!-- Blog Start -->
     <div class="blog-details-area pt-150 pb-140">
@@ -84,7 +85,7 @@ echo '<script src="../js/malla.js"></script>';
     <!-- Blog End -->
 
     <!-- FOOTER -->
-    <?php include_once "../include/footer.php"; ?>
+    @include("include.footer")
     <!-- FOOTER -->
 
     <div class="modal" id="malla-modal" tabindex="-1" role="dialog">

@@ -1,12 +1,13 @@
 <!doctype html>
 <html class="no-js" lang="span">
+    @include("config.config")
+    @include("include.functions")
+    @include("include.head")
 <?php
 session_start();
 $file = __FILE__;
 $pagetitle = "Proyectos - DIICC UDA";
-include_once "config/config.php";
-include_once "include/functions.php";
-include_once "include/head.php";
+
 if (!isset($_GET['page'])){
     $page = 0;
 }
@@ -17,7 +18,7 @@ else{
 
 <body>
     <!-- Header -->
-    <?php include_once "include/header.php"; ?>
+    @include("include/header")
     <!-- Header Area End -->
     <!-- Banner Area Start -->
     <div class="banner-area-wrapper">
@@ -173,7 +174,7 @@ else{
     <!-- Blog End -->
 
     <!-- FOOTER -->
-    <?php include_once "include/footer.php"; ?>
+    @include("include.footer")
     <!-- FOOTER -->
 </body>
 

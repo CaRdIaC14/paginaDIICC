@@ -1,16 +1,19 @@
 <!doctype html>
 <html class="no-js" lang="en">
+
+    @include("config.config")
+    @include("include.functions")
+    @include("include.head")
+
     <?php
         session_start();
         $file = __FILE__;
         $pagetitle = "actividades - DIICC UDA";
-        include_once "config/config.php";
-        include_once "include/functions.php";
-        include_once "include/head.php";
+
     ?>
     <body>
         <!-- Header -->
-        <?php include_once "include/header.php"; ?>
+        @include("include/header")
         <!-- Header Area End -->
 		<!-- Banner Area Start -->
 		<div class="banner-area-wrapper">
@@ -93,7 +96,7 @@
             
         <!-- FOOTER -->
         <!-- FOOTER -->
-        <?php include_once "include/footer.php"; ?>
+        @include("include.footer")
         <!-- FOOTER -->
     </body>
 </html>

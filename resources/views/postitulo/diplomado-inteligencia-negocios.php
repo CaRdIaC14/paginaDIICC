@@ -2,17 +2,18 @@
     <!--ordenar los titulos y que vaya una separacion en las informaciones-->
     <!--Hacer el mismo diseño que en la parte de magister-->
 <html class="no-js" lang="en">
+    @include("config.config")
+    @include("include.functions")
+    @include("include.head")
 <?php
     session_start();
     $file = __FILE__;
     $pagetitle = "DIPLOMADO EN TECNOLOGÍA PARA INTELIGENCIA DE NEGOCIOS - DIICC UDA";
-    include_once "../include/functions.php";
-    include_once "../config/config.php";
-    include_once "../include/head.php";
+
 ?>
     <body>
         <!-- HEADER -->
-        <?php include_once "../include/header.php";?>
+        @include("include/header")
         <!-- HEADER -->
         <!-- Blog Start -->
         <div class="blog-details-area pt-150 pb-140">
@@ -518,7 +519,7 @@
         <!-- Blog End -->
         
         <!-- FOOTER -->
-        <?php include_once "../include/footer.php";?>
+        @include("include.footer")
         <!-- FOOTER -->
     </body>
 </html>

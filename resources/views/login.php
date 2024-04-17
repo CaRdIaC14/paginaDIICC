@@ -1,12 +1,12 @@
 <!doctype html>
 <html class="no-js" lang="en">
+    @include("config.config")
+    @include("include.functions")
+    @include("include.head")
 <?php
     session_start();
     $file = __FILE__;
     $pagetitle = "Iniciar Sesión - DIICC UDA";
-    include_once "config/config.php";
-    include_once "include/functions.php";
-    include_once "include/head.php";
 
     if (isset($_SESSION['usuario'])){
         header(sprintf('Location:%s', fromroot($file, "dashboard/index.php", True)));
@@ -14,7 +14,7 @@
 ?>
     <body>
         <!-- HEADER -->
-        <?php include_once "include/header.php"; ?>
+        @include("include/header")
         <!-- HEADER -->
 		<!-- Banner Area Start
 		<div class="banner-area-wrapper">
@@ -74,7 +74,7 @@
         <!-- Login end --> 
         
         <!-- FOOTER -->
-        <?php include_once "include/footer.php"; ?>
+        @include("include.footer")
         <!-- FOOTER -->
     </body>
 </html>

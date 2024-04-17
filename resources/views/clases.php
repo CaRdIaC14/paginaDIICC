@@ -1,16 +1,17 @@
 <!doctype html>
 <html class="no-js" lang="en">
+    @include("config.config")
+    @include("include.functions")
+    @include("include.head")
     <?php
         session_start();
         $file = __FILE__;
         $pagetitle = "clases - DIICC UDA";
-        include_once "config/config.php";
-        include_once "include/functions.php";
-        include_once "include/head.php";
+
     ?>
     <body>
         <!-- Header -->
-        <?php include_once "include/header.php"; ?>
+        @include("include/header")
         <!-- Header Area End -->
         <div class="overlay">
             <div class="slideshow">
@@ -78,7 +79,7 @@
         
         <!-- FOOTER -->
         <!-- FOOTER -->
-        <?php include_once "include/footer.php"; ?>
+        @include("include.footer")
         <!-- FOOTER -->
         <script src="js/script4.js"></script>
     </body>

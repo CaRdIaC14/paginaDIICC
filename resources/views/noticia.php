@@ -2,8 +2,6 @@
     session_start();
     $file = __FILE__;
     $pagetitle = "Noticias - DIICC UDA";
-    include_once "config/config.php";
-    include_once "include/functions.php";
 
     $id = $_GET['id'];
     $sql = "select * from noticias where id = {$id}";
@@ -12,9 +10,12 @@
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
-    <?php include_once "include/head.php"; ?>
+
+    @include("config.config")
+    @include("include.functions")
+    @include("include.head")
     <!-- HEADER -->
-    <?php include_once "include/header.php"; ?>
+    @include("include/header")
     <!-- HEADER -->
     <body>
         
@@ -113,7 +114,7 @@
         <!-- Blog End -->
         
         <!-- FOOTER -->
-        <?php include_once "include/footer.php"; ?>
+        @include("include.footer")
         <!-- FOOTER -->
     </body>
 </html>

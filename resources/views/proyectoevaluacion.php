@@ -1,18 +1,19 @@
 <!doctype html>
 <html class="no-js" lang="span">
+    @include("config.config")
+    @include("include.functions")
+    @include("include.head")
 <?php
     session_start();
     $file = __FILE__;
     $pagetitle = "EVALUACIÓN DE LA USABILIDAD DE APLICACIONES MÓVILES MULTI-PLATAFORMA - DIICC UDA";
-    include_once "config/config.php";
-    include_once "include/functions.php";
-    include_once "include/head.php";
+
 ?>
     <body>
 
 	    <body>
             <!-- Header -->
-            <?php include_once "include/header2.php"; ?>
+            @include("include/header")
             <!-- Header Area End -->
 		
         <!-- Blog Start -->
@@ -107,7 +108,7 @@
         </div>
         <!-- Blog End -->
         <!-- FOOTER -->
-        <?php include_once "include/footer.php"; ?>
+        @include("include.footer")
         <!-- FOOTER -->
     </body>
 </html>
