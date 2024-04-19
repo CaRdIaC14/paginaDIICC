@@ -1,22 +1,22 @@
 <!doctype html>
 <html class="no-js" lang="en">
-    @include("config.config")
-    @include("include.functions")
-    @include("include.head")
-<?php
-    session_start();
-    $file = __FILE__;
-    $pagetitle = "Iniciar Sesión - DIICC UDA";
+    @include("include.functions");
+    @include("include.head");
 
-    if (isset($_SESSION['usuario'])){
-        header(sprintf('Location:%s', fromroot($file, "dashboard/index.php", True)));
-    }
+<?php
+    // session_start();
+    // $file = __FILE__;
+    // $pagetitle = "Iniciar Sesión - DIICC UDA";
+
+    // if (isset($_SESSION['usuario'])){
+    //     header(sprintf('Location:%s', fromroot($file, "dashboard/index.php", True)));
+    // }
 ?>
     <body>
         <!-- HEADER -->
         @include("include/header")
         <!-- HEADER -->
-		<!-- Banner Area Start
+		
 		<div class="banner-area-wrapper">
             <div class="banner-area text-center">	
                 <div class="container">
@@ -24,7 +24,7 @@
                         <div class="col-xs-12">
                             <div class="banner-content-wrapper">
                                 <div class="banner-content">
-                                    <h2>login</h2> 
+                                    <h2>iniciar sesion</h2> 
                                 </div> 
                             </div>
                         </div>
@@ -32,7 +32,7 @@
                 </div>
             </div>
         </div>    
-		Banner Area End -->
+		
         <!-- Login start -->
         <div class="login-area pt-150 pb-150">
             <div class="container pt-100">
@@ -40,9 +40,7 @@
                     <div class="col-md-6 col-md-offset-3 text-center">
                         <div class="login">
                             <div class="login-form-container">
-                                <div class="login-text">
-                                    <h2>Inicia sesión</h2>
-                                </div>
+                                
                                 <?php
                                     if (isset($_SESSION['errorLogin'])) {
                                     echo "<div class='alert alert-danger'>".$_SESSION['errorLogin']."</div>";

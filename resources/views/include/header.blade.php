@@ -2,7 +2,7 @@
     <div class="header-top">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 col-sm-8 col-xs-8">
+                <div class="col-md-7 col-sm-7 col-xs-7">
                     <div class="header-top-right">
                         <ul>
                             <li><a href="http://www.moodle.uda.cl/" target="_blank">Moodle</a></li>
@@ -10,11 +10,12 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-4 col-xs-4">
+                <div class="col-md-5 col-sm-5 col-xs-5">
                     <div class="header-top-right text-right">
                         <ul>
-                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeuu1sPGDU3e2R0Tz8ja5oUdVX0PBNcYaj-aiErw89I4rr56w/viewform?embedded=true" target="_blank">Sugerencias</a></li>
+                            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeuu1sPGDU3e2R0Tz8ja5oUdVX0PBNcYaj-aiErw89I4rr56w/viewform?embedded=true" target="_blank">Sugerencias</a></li>
                             <li><a href="https://admision.uda.cl/index.php/ingenieria-civil-en-computacion-e-informatica/" target="_blank">Admisión</a></li>
+                            <li><a href="{{ url('/login') }}">iniciar sesion</a></li>
                         </ul>
                     </div>
                 </div>
@@ -37,7 +38,7 @@
                         <div class="main-menu one text-right">
                             <nav>
                                 <ul>
-                                    <li><a href="index.php")>Inicio</a></li>
+                                    <li><a href="{{ url('/') }}")>Inicio</a></li>
                                     <li><a href="{{ url('/Departamento') }}">Departamento</a></li>
                                     <li class="hidden-sm"><a href="academicos.php">Equipo</a>
                                         <ul>

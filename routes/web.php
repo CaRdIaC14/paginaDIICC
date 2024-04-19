@@ -10,6 +10,10 @@ Route::get('/Departamento', function () {
     return view('departamento'); // Reemplaza 'departamento' con el nombre de tu vista de departamento
 });
 
+Route::get('/login', function () {
+    return view('login'); 
+});
+
 Route::get('/funcionarios', function () {
     return view('funcionarios'); 
 });
