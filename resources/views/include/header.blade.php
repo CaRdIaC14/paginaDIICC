@@ -15,7 +15,7 @@
                         <ul>
                             <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeuu1sPGDU3e2R0Tz8ja5oUdVX0PBNcYaj-aiErw89I4rr56w/viewform?embedded=true" target="_blank">Sugerencias</a></li>
                             <li><a href="https://admision.uda.cl/index.php/ingenieria-civil-en-computacion-e-informatica/" target="_blank">Admisión</a></li>
-                            <li><a href="{{ url('/login') }}">iniciar sesion</a></li>
+                            <li><a href="{{ route('login') }}">iniciar sesion</a></li>
                         </ul>
                     </div>
                 </div>
@@ -39,11 +39,11 @@
                             <nav>
                                 <ul>
                                     <li><a href="{{ url('/') }}")>Inicio</a></li>
-                                    <li><a href="{{ url('/Departamento') }}">Departamento</a></li>
+                                    <li><a href="{{ route('Departamento') }}">Departamento</a></li>
                                     <li class="hidden-sm"><a href="academicos.php">Equipo</a>
                                         <ul>
-                                            <li><a href="academicos.php">Académicos</a></li>
-                                            <li><a href="{{ url('/funcionarios') }}">Administrativos</a></li>
+                                            <li><a href="{{ route('academicos') }}">Académicos</a></li>
+                                            <li><a href="{{ route('funcionarios') }}">Administrativos</a></li>
                                         </ul>
                                     </li>
                                    
@@ -52,35 +52,35 @@
                                         <ul>
                                             <li><a>Pregrado</a>
                                                 <ul>
-                                                    <li><a href="{{ url('/Ingeniera-Civil') }}">Ingeniería civil en Computación e Informática</a></li>
+                                                    <li><a href="{{ route('Ingenieria-Civil') }}">Ingeniería civil en Computación e Informática</a></li>
                                                 </ul>
                                             </li>
                                             <li><a>Postítulo</a>
                                                 <ul>
-                                                    <li><a href="postitulo/diplomado-inteligencia-negocios.php")>Diplomado en tecnología para inteligencia de negocios</a></li>
+                                                    <li><a href="{{ route('Inteligencia-Negocio') }}">Diplomado en tecnología para inteligencia de negocios</a></li>
                                                     <!-- <li><a href=<?php /*echo fromroot($file, "postitulo/diplomado-gestion.php"); */?>>Diplomado en gestión de tecnologias de la información</a></li> -->
                                                 </ul>
                                             </li>
                                             <li><a>Postgrado</a>
                                                 <ul>
                                                     <!-- <li><a href=<?php /*echo fromroot($file, "postgrado/tecnologia.php"); */?>>Magister en tecnologias de la informacion e innovación</a></li> -->
-                                                    <li><a href="postgrado/informatica.php")>Magíster en Informática y Ciencias de la Computación</a></li>
+                                                    <li><a href="{{ route('Magister-Informatica') }}">Magíster en Informática y Ciencias de la Computación</a></li>
                                                     <!-- <li><a href=<?php /* echo fromroot($file, "postgrado/procesos-software.php"); */?>>Diplomado en procesos integrales de software</a></li> -->
                                                     <!-- <li><a href=<?php /*echo fromroot($file, "postgrado/gestion-innovacion.php"); */?>>Diplomado en gestión de innovacion y emprendimiento</a></li> -->
                                                 </ul>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li><a href="noticias.php">Noticias</a></li>
+                                    <li><a href="{{ route('noticia') }}">Noticias</a></li>
                                     
-                                    <li><a href="publicaciones.php">Investigaciones</a>
+                                    <li><a>Investigaciones</a>
                                         <ul>
-                                            <li><a href="publicaciones.php">Publicaciones</a></li>
-                                            <li><a href="proyectos.php">Proyectos</a></li>
+                                            <li><a href="{{ route('publicacion') }}">Publicaciones</a></li>
+                                            <li><a href="{{ route('proyecto') }}">Proyectos</a></li>
 
                                         </ul>
                                     </li>
-                                    <li><a href="galerias.php">Galería</a></li>
+                                    <li><a href="{{ route('galeria') }}">Galería</a></li>
                                     <!-- <li><a href="trabajo.php">Bolsa de Trabajo</a></li>-->
                                     </li>
                                     <!--<li><a href="bolsaempleo.php">Empleos</a></li>-->

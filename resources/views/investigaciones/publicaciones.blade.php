@@ -1,8 +1,5 @@
 <!doctype html>
 <html class="no-js" lang="span">
-
-    @include("config.config")
-    @include("include.functions")
     @include("include.head")
 
 <?php

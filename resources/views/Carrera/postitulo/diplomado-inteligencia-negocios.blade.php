@@ -2,8 +2,6 @@
     <!--ordenar los titulos y que vaya una separacion en las informaciones-->
     <!--Hacer el mismo diseño que en la parte de magister-->
 <html class="no-js" lang="en">
-    @include("config.config")
-    @include("include.functions")
     @include("include.head")
 <?php
     session_start();

@@ -1,6 +1,5 @@
 <!doctype html>
 <html class="no-js" lang="en">
-    @include("include.functions");
     @include("include.head");
 
 <?php
@@ -40,15 +39,8 @@
                     <div class="col-md-6 col-md-offset-3 text-center">
                         <div class="login">
                             <div class="login-form-container">
-                                
-                                <?php
-                                    if (isset($_SESSION['errorLogin'])) {
-                                    echo "<div class='alert alert-danger'>".$_SESSION['errorLogin']."</div>";
-                                    unset($_SESSION['errorLogin']);
-                                }
-                                ?>
                                 <div class="login-form">
-                                    <form action="database/login.php" method="POST" autocomplete="off">
+                                    <form action="{{route('iniciarSesion')}}" method="POST" autocomplete="off">
                                         <input type="email" name="correo" placeholder="Correo institucional">
                                         <input type="password" name="password" placeholder="Contraseña">
                                         <div class="button-box">

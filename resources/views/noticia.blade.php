@@ -11,8 +11,6 @@
 <!doctype html>
 <html class="no-js" lang="en">
 
-    @include("config.config")
-    @include("include.functions")
     @include("include.head")
     <!-- HEADER -->
     @include("include/header")
