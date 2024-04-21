@@ -41,6 +41,7 @@
                             <div class="login-form-container">
                                 <div class="login-form">
                                     <form action="{{route('iniciarSesion')}}" method="POST" autocomplete="off">
+                                        @csrf
                                         <input type="email" name="correo" placeholder="Correo institucional">
                                         <input type="password" name="password" placeholder="Contraseña">
                                         <div class="button-box">

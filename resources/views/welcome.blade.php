@@ -7,8 +7,6 @@
     $file = __FILE__;
     $pagetitle = "UDA - Departamento de Ingeniería Informática y Ciencias de la Computación";
     ?>
-    
-    @include("include.functions")
     @include("include.head")
  <meta charset="UTF-8">
 <body>

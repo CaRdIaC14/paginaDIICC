@@ -38,7 +38,7 @@
                         <div class="main-menu one text-right">
                             <nav>
                                 <ul>
-                                    <li><a href="{{ url('/') }}")>Inicio</a></li>
+                                    <li><a href="{{ route('welcome') }}")>Inicio</a></li>
                                     <li><a href="{{ route('Departamento') }}">Departamento</a></li>
                                     <li class="hidden-sm"><a href="academicos.php">Equipo</a>
                                         <ul>

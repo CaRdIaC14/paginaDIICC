@@ -19,6 +19,7 @@ class CreateUsuariosTable extends Migration
             $table->string('nombre', 25);
             $table->string('apellido', 25);
             $table->integer('tipo')->default(0);
+            $table->timestamps();
         });
     }
 
