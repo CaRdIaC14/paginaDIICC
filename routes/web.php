@@ -9,7 +9,7 @@ use App\Http\Controllers\LoginController;
 Route::view('/', 'welcome')->name('welcome');
 Route::view('login', 'login')->name('login');
 
-Route::view('/Departamento', 'Departamento')->name('Departamento');
+Route::view('/Departamento', 'asd')->name('Departamento');
 Route::view('/Academicos', 'equipo/academicos')->name('academicos');
 Route::view('/Administrativos', 'equipo/funcionarios')->name('funcionarios');
 Route::view('/Ingenieria-Civil-en-Computacion-e-Informatica','Carrera/pregrado/Ingenieria-Civil')->name('Ingenieria-Civil');
@@ -22,5 +22,5 @@ Route::view('/Galeria', 'galerias')->name('galeria');
 
 Route::view('/secret', 'hola')->name('hola');
 
-Route::post('/iniciarSesion',[LoginController::class,'login'])->name('iniciarSesion');
-
+Route::post('loginVerify',[LoginController::class,'loginVerify'])->name('loginVerify');
+Route::post('register',[LoginController::class,'register'])->name('register');

@@ -2,43 +2,58 @@
 
 namespace App\Http\Controllers;
 
-use illuminate\Http\Request;
-
-use App\Models\Usuario;
+use Illuminate\Http\Request;
+use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
-
-class LoginController extends Controller{
-
+class LoginController extends Controller
+{
     public function register(Request $request){
 
 
-        $user = new Usuario();
+        $user = new User();
 
-        $user->nombre = $request->name;
-        $user->apellido = $request->apellido;
-        $user->password = hash::make($request->password);
-        $user->correo = $request->correo;
+        $user->nombre = $user->nombre;
+        $user->apellido = $user->apellido;
+        $user->password = hash::make($user->password);
+        $user->correo =$user->correo;
         $user->save();
 
         Auth::login($user);
         return redirect()->route('hola');
     }
 
-    public function login (Request $request){
+    public function loginVerify (Request $request){
         
-        return redirect()->route('hola');
-        // $credenciales = [
-        //         'email' => $request->correo,
-        //         'password' => $request->password
-        // ];
-        // if(Auth::attempt($credenciales)){
-        //     $request-> session()->regenerate();
-        //     return redirect()->intended(route('hola'));
-        // }
+        
+        // dd($request->all());
+        
+        $credenciales = [
+                'correo' => $request->correo,
+                'password' => $request->password
+        ];
+        
+        // $remember = ($request->has('remember') ? true : false);
+        if(Auth::attempt($credenciales)){
+            // $request-> session()->regenerate();
+            return redirect()->intended(route('hola'));
+        }
+        else{
+            return $request;
+        }
     }
 
-    public function logout (Request $request){
-        echo $request;
+    public function crear(){
+
+        $user = new User();
+
+        $user->nombre = 'asd';
+        $user->apellido = 'asd';
+        $user->password = hash::make('asd');
+        $user->correo = 'asd@asd';
+        $user->save();
+
+        Auth::login($user);
+        return redirect()->route('hola');
     }
 }
