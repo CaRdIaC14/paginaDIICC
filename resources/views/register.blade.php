@@ -23,7 +23,7 @@
                         <div class="col-xs-12">
                             <div class="banner-content-wrapper">
                                 <div class="banner-content">
-                                    <h2>iniciar sesion</h2> 
+                                    <h2>Registrar</h2> 
                                 </div> 
                             </div>
                         </div>
@@ -40,23 +40,22 @@
                         <div class="login">
                             <div class="login-form-container">
                                 <div class="login-form">
-                                    <form action="{{ route('loginVerify') }}" method="POST" >
+                                    <form action="{{ route('register') }}" method="POST" >
                                         @csrf
-                                        <input type="email" name="asdasd" placeholder="Correo institucional">
+                                        <input type="text" name="nombre" placeholder="Ingrese Nombre">
+                                        <input type="text" name="apellido" placeholder="Ingrese Apellido">
+                                        <input type="email" name="correo" placeholder="Correo institucional">
                                         <input type="password" name="password" placeholder="Contraseña">
                                         <div class="button-box">
                                             <div class="login-toggle-btn">
                                                 <input type="checkbox" id="remember">
                                                 <label for="remember">Recuérdame</label>
                                                 <a href="#">Olvidaste la clave?</a>
-                                                <a href="{{ route('register') }}" style="margin-right: 30px;">Registrar</a>
                                             </div>
                                             <div class="button-box text-center">
                                                 <button type="submit" class="default-btn">Entrar</button>
                                             </div>
-                                            
                                         </div>
-                                        
                                     </form>
                                 </div>
                             </div>

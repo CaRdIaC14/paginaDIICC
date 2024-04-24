@@ -71,7 +71,7 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <li><a href="{{ route('noticia') }}">Noticias</a></li>
+                                    <li><a href="{{ route('noticias') }}">Noticias</a></li>
                                     
                                     <li><a>Investigaciones</a>
                                         <ul>

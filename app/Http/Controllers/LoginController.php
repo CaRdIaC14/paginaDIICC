@@ -13,10 +13,10 @@ class LoginController extends Controller
 
         $user = new User();
 
-        $user->nombre = $user->nombre;
-        $user->apellido = $user->apellido;
-        $user->password = hash::make($user->password);
-        $user->correo =$user->correo;
+        $user->nombre = $request->nombre;
+        $user->apellido = $request->apellido;
+        $user->password = hash::make($request->password);
+        $user->correo =$request->correo;
         $user->save();
 
         Auth::login($user);
