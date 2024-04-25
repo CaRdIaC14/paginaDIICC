@@ -40,7 +40,7 @@
                         <div class="login">
                             <div class="login-form-container">
                                 <div class="login-form">
-                                    <form action="{{ route('register') }}" method="POST" >
+                                    <form action="{{ route('registerVerify') }}" method="POST" >
                                         @csrf
                                         <input type="text" name="nombre" placeholder="Ingrese Nombre">
                                         <input type="text" name="apellido" placeholder="Ingrese Apellido">

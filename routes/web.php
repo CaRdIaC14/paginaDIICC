@@ -8,7 +8,6 @@ use App\Http\Controllers\LoginController;
 
 Route::view('/', 'welcome')->name('welcome');
 Route::view('login', 'login')->name('login');
-
 Route::view('register', 'register')->name('register');
 
 Route::view('/Departamento', 'asd')->name('Departamento');
@@ -26,7 +25,7 @@ Route::view('/secret', 'hola')->name('hola');
 
 Route::prefix('auth')->group(function(){
     Route::post('loginVerify',[LoginController::class,'loginVerify'])->name('loginVerify');
-    Route::post('register',[LoginController::class,'register'])->name('register');
+    Route::post('register',[LoginController::class,'register'])->name('registerVerify');
     Route::post('singOut',[LoginController::class,'singOut'])->name('singOut');
 });
 
