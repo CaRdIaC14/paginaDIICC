@@ -11,6 +11,10 @@ class LoginController extends Controller
     public function register(Request $request){
 
 
+        $request->validate([
+            'correo' => 'required|unique:users,correo',
+        ]);
+
         $user = new User();
 
         $user->nombre = $request->nombre;
@@ -20,13 +24,10 @@ class LoginController extends Controller
         $user->save();
 
         Auth::login($user);
-        return redirect()->route('hola');
+        return redirect()->route('dashboard');
     }
 
     public function loginVerify (Request $request){
-        
-        
-        // dd($request->all());
         
         $credenciales = [
                 'correo' => $request->correo,
@@ -36,24 +37,15 @@ class LoginController extends Controller
         // $remember = ($request->has('remember') ? true : false);
         if(Auth::attempt($credenciales)){
             // $request-> session()->regenerate();
-            return redirect()->intended(route('hola'));
+            return redirect()->intended(route('dashboard'));
         }
-        else{
-            return $request;
-        }
+
+        return back()->withErrors(['invalid_credentials'=> 'Correo o contrasena no valido'])->withInput();
     }
 
-    public function crear(){
-
-        $user = new User();
-
-        $user->nombre = 'asd';
-        $user->apellido = 'asd';
-        $user->password = hash::make('asd');
-        $user->correo = 'asd@asd';
-        $user->save();
-
-        Auth::login($user);
-        return redirect()->route('hola');
+    public function singOut(){
+        Auth::logout();
+        return redirect()->route('welcome');
     }
+
 }

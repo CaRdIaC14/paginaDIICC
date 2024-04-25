@@ -40,9 +40,14 @@
                         <div class="login">
                             <div class="login-form-container">
                                 <div class="login-form">
+                                    @error('invalid_credentials')
+                                        <small style="color: red">
+                                            {{$message}}
+                                        </small>  
+                                    @enderror
                                     <form action="{{ route('loginVerify') }}" method="POST" >
                                         @csrf
-                                        <input type="email" name="asdasd" placeholder="Correo institucional">
+                                        <input type="email" name="correo" value="{{old('correo')}}" placeholder="Correo institucional">
                                         <input type="password" name="password" placeholder="Contraseña">
                                         <div class="button-box">
                                             <div class="login-toggle-btn">

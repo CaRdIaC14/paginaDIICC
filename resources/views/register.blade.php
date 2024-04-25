@@ -44,6 +44,12 @@
                                         @csrf
                                         <input type="text" name="nombre" placeholder="Ingrese Nombre">
                                         <input type="text" name="apellido" placeholder="Ingrese Apellido">
+                                        
+                                        @error('correo')
+                                            <small class="text-danger mt-1">
+                                                <strong>Correo ya existente </strong>
+                                            </small>
+                                        @enderror
                                         <input type="email" name="correo" placeholder="Correo institucional">
                                         <input type="password" name="password" placeholder="Contraseña">
                                         <div class="button-box">

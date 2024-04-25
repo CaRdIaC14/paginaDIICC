@@ -24,5 +24,14 @@ Route::view('/Galeria', 'galerias')->name('galeria');
 
 Route::view('/secret', 'hola')->name('hola');
 
-Route::post('loginVerify',[LoginController::class,'loginVerify'])->name('loginVerify');
-Route::post('register',[LoginController::class,'register'])->name('register');
+Route::prefix('auth')->group(function(){
+    Route::post('loginVerify',[LoginController::class,'loginVerify'])->name('loginVerify');
+    Route::post('register',[LoginController::class,'register'])->name('register');
+    Route::post('singOut',[LoginController::class,'singOut'])->name('singOut');
+});
+
+Route::middleware('auth')->group(function(){
+    Route::get('dashboard', function(){
+        return view('dashboard.dashboard');
+    })->name('dashboard');
+});
